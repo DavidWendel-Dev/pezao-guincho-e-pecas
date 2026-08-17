@@ -72,7 +72,7 @@ html{scroll-padding-top:150px}
 /* Respiro no banner mobile antes da faixa inferior */
 @media(max-width:650px){
   .hero{min-height:auto}
-  .hero-content{min-height:auto;padding:48px 0 110px;align-items:start}
+  .hero-content{min-height:auto;padding:48px 0 180px;align-items:start}
 }
 
 
