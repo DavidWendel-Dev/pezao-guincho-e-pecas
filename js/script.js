@@ -4,6 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.nav a');
   const form = document.querySelector('#contact-form');
   const formMessage = document.querySelector('#form-message');
+  const defaultWhatsappMessage = 'Olá! Vim pelo site da Pezão Guincho e Peças e gostaria de solicitar atendimento.';
+
+  document.querySelectorAll('a[href^="https://wa.me/"]').forEach((link) => {
+    const url = new URL(link.href);
+    url.searchParams.set('text', defaultWhatsappMessage);
+    link.href = url.toString();
+  });
 
   document.querySelector('#year').textContent = new Date().getFullYear();
 

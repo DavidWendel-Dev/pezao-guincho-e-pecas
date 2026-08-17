@@ -1,6 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
   const shareButton = document.querySelector('#share-button');
   const feedback = document.querySelector('#share-feedback');
+  const defaultWhatsappMessage = 'Olá! Vim pelo site da Pezão Guincho e Peças e gostaria de solicitar atendimento.';
+
+  document.querySelectorAll('a[href^="https://wa.me/"]').forEach((link) => {
+    const url = new URL(link.href);
+    url.searchParams.set('text', defaultWhatsappMessage);
+    link.href = url.toString();
+  });
+
   const shareData = {
     title: 'Pezão Guincho e Peças',
     text: 'Fale com a Pezão Guincho e Peças em Porto Velho - RO.',
