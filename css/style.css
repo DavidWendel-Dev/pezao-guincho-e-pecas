@@ -53,3 +53,31 @@ html{scroll-padding-top:150px}
 /* Ícones dos canais de WhatsApp */
 .info-icon.whatsapp-icon{background:#25d366;color:#fff;border-color:#25d366}
 .info-icon.whatsapp-icon svg{width:19px;height:19px;display:block;fill:currentColor}
+
+
+/* Chamada comercial e telefones no banner */
+.hero-call{max-width:465px;margin:24px 0 0;padding:15px 16px 13px;border-left:3px solid var(--red);background:rgba(255,255,255,.06)}
+.hero-call-label{display:block;margin-bottom:9px;color:#fff;font-size:9px;font-weight:800;letter-spacing:.14em}
+.hero-phone-links{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.hero-phone-links a{padding:8px 9px;border:1px solid rgba(255,255,255,.2);background:rgba(0,0,0,.22);transition:.2s}
+.hero-phone-links a:hover{border-color:var(--red);background:rgba(215,24,50,.2);transform:translateY(-2px)}
+.hero-phone-links small,.hero-phone-links strong{display:block;line-height:1.25}
+.hero-phone-links small{color:#bbb;font-size:8px;font-weight:800;letter-spacing:.08em}
+.hero-phone-links strong{color:#fff;font-family:var(--font-head);font-size:22px;letter-spacing:.025em}
+.hero-slogan{margin:12px 0 0;color:#ddd;font-size:9px;font-weight:700;letter-spacing:.08em;line-height:1.5}
+.hero-slogan strong{color:#fff}.hero-slogan span{margin:0 5px;color:var(--red)}
+@media(max-width:650px){.hero-call{margin-top:18px;padding:12px}.hero-phone-links{grid-template-columns:1fr;gap:7px}.hero-phone-links a{padding:8px 10px}.hero-phone-links strong{font-size:20px}.hero-slogan{font-size:8px}}
+
+
+/* Respiro no banner mobile antes da faixa inferior */
+@media(max-width:650px){
+  .hero{min-height:auto}
+  .hero-content{min-height:auto;padding:48px 0 110px;align-items:start}
+}
+
+
+/* Destaque maior para o slogan regional */
+.hero-slogan{display:flex;flex-direction:column;gap:3px;letter-spacing:normal}
+.hero-slogan span{margin:0;color:#ddd;font-size:9px;font-weight:800;letter-spacing:.12em}
+.hero-slogan strong{margin:0;color:#fff;font-family:var(--font-head);font-size:clamp(27px,3.2vw,39px);font-weight:700;letter-spacing:.02em;line-height:.86;text-shadow:0 2px 8px rgba(0,0,0,.35)}
+@media(max-width:650px){.hero-slogan strong{font-size:29px}.hero-slogan span{font-size:8px}}
